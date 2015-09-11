@@ -1,0 +1,37 @@
+@(title: String, user: String)(content: Html)
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>@title</title>
+        <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/main.css")">
+        <link rel="shortcut icon" type="image/png" href="@routes.Assets.at("images/favicon.png")">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+    	<nav class="navbar navbar-default">
+		  <div class="container-fluid">
+		    <div class="navbar-header">
+		      <a class="navbar-brand" href="/">Airline Reservation System</a>
+		    </div>
+		    <div>
+		      <ul class="nav navbar-nav">
+		        <li class="active"><a href="/">Search</a></li>
+		        @if(user != null) {
+		        	<li><a href="/summary">My Bookings</a></li>
+					<li><a href="/logout">Welcome! @user Logout</a></li>
+				} else {
+					<li><a href="/login">Hello Guest! Login</a></li>
+				}
+		      </ul>
+		    </div>
+		  </div>
+		</nav>
+  
+		<div class="container">
+		  @content
+		</div>
+    </body>
+</html>

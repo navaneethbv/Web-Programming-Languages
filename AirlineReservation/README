@@ -1,0 +1,65 @@
+This is a sample web application built using play framework 2.2.x
+
+The web application runs as https://www.airlines.com:9443/
+Modify /etc/hosts file as
+
+127.0.0.1		www.airlines.com
+
+The following languages and tenchologies were used:-
+
+1. HTML
+2. Scala - for rendering HTML pages
+3. Java - for back-end logic
+5. Bootstrap 3 - for the CSS, jQuery and JS support and the look
+6. mySQL - for database
+7. Eclipse Luna - for application development
+
+The following has been implemented inside of this application:-
+
+1. Caching - If a search is present in the cache, it is fetched from the Cache API, else the database is queried
+2. Communication over HTTPS - following were the commands used to generate the server certificate
+
+keytool -genkey -alias keyAlias -keyalg RSA -keypass changeit -storepass changeit -keystore keystore.jks
+keytool -export -alias keyAlias -storepass changeit -file server.cer -keystore keystore.jks
+keytool -import -v -trustcacerts -alias keyAlias -file server.cer -keystore cacerts.jks -keypass changeit -storepass changeit
+
+After the certificates are generated, restart the application binding to an HTTPS port as
+
+-Dhttp.port=disabled -Dhttps.port=9443 -Dhttps.keyStore="D:\Github\Web-programming-languages\AirlineReservation\conf\server.cer" -Dhttps.keyStorePassword=changeit
+
+3. Request/Response compression - gzip used
+4. Authentication/Authorization - The functionalities for booking and user summary require user authorization for access
+5. Asynchronous service - All the web services are routed to AJAX actions
+6. Single Sign-On - Twitter API used to authenticate over HTTP (not HTTPS)
+
+If running in HTTPS, manually enter the home page url after authentication from Twitter as redirection will not be possible
+
+7. ORM - Ebean model used
+
+The following has been implemented outside of this application:-
+
+1. Apllication redundancy
+2. Database sharding
+
+To configure this application :-
+
+1. Run the database queries on mySQL server in the order :-
+CreateDB.sql
+CreateTables.sql
+LoadData.sql
+
+2. Install the play framework 2.2
+3. Go the this project`s root directory and enter the command
+
+D:\Github\Web-programming-languages\AirlineReservation>"C:\Users\Ekal\Downloads\UTD\play-2.2.6\play"
+
+In the play CLI, enter the commmands in the order:-
+update
+clean
+eclipse
+compile
+exit
+
+On the CMD prompt, enter the command
+
+D:\Github\Web-programming-languages\AirlineReservation>"C:\Users\Ekal\Downloads\UTD\play-2.2.6\play" -Dhttp.port=disabled -Dhttps.port=9443 -Dhttps.keyStore="D:\Github\Web-programming-languages\AirlineReservation\conf\keystore.jks" -Dhttps.keyStorePassword=changeit run

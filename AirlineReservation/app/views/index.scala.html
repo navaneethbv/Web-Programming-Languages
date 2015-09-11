@@ -1,0 +1,34 @@
+@(origins: List[String], destinations: List[String], user: String) @import helper._
+
+@main("Airline Reservation system", user) {
+<h2>Book a flight</h2>
+@form(routes.Flights.index()) {
+<div class="row-fluid">
+	<div class="span6">        
+		<div class="form-group">
+			<label for="origin">From: </label>
+			<select id="origin" name="origin" class="form-control"> @for(airport <- origins) {
+				<option value="@airport">@airport</option> }
+			</select>
+		</div>
+		<div class="form-group">
+			<label for="destination">To: </label>
+			<select id="destination" name="destination" class="form-control"> @for(airport <- destinations) {
+				<option value="@airport">@airport</option> }
+			</select>
+		</div>
+		<div class="form-group">
+			<label for="Class">Class</label>
+			<select id="Class" name="Class" class="form-control">
+				<option value="E">Economy class</option>
+				<option value="B">Business class</option>
+			</select>
+		</div>
+		<div class="form-actions">
+			<button id="get-flights" type="submit" class="btn btn-primary">Get
+				Flights</button>
+			<a href=@routes.Application.index() class="btn">Cancel</a>
+		</div>
+	</div>
+</div>
+} }

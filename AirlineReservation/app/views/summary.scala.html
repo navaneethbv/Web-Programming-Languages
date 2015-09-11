@@ -1,0 +1,41 @@
+@(results: List[Summary.Info], user: String) @import helper._ 
+
+@main("My Bookings", user) {
+<h2>Bookings made by user @user</h2>
+<p>Click on a booking to see its details</p>
+<div class="panel-group" id="accordion">
+	@for(info <- results) {
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h3>
+				<a data-toggle="collapse" data-parent="#accordion"
+					href="#collapse@info.flight_no">@(info.airline + "\t:\t" +
+					info.flight_no)</a>
+			</h3>
+			<div align="right">
+				<label>@(info.date_created)</label>
+			</div>
+			<div class="span 2">
+				<label>@(info.origin + " : " + info.departure_time + "\t-\t" + info.destination + " : " + info.arrival_time)</label>
+			</div>
+			<div class="span 2">
+				<label>Duration: @(info.duration)</label>
+			</div>
+		</div>
+		<div id="collapse@info.flight_no" class="panel-collapse collapse">
+			<div class="panel-body">
+				<div class="span 2">
+					<label>Number of Adults: @(info.no_of_adults)</label>
+				</div>
+				<div class="span 2">
+					<label>Number of Children: @(info.no_of_children)</label>
+				</div>
+				<div class="span 4">
+					<label>Seats: @(info.seats)</label>
+				</div>
+			</div>
+		</div>
+	</div>
+	}
+</div>
+}

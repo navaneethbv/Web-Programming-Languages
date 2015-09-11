@@ -1,0 +1,37 @@
+@(results: List[Flights.ResultInfo], user: String) @import helper._
+
+@main("Search Results", user) {
+<h2>Search Results</h2>
+<p>Click on a result to book that flight</p>
+<div class="panel-group" id="accordion">
+	@for(info <- results) { @form(routes.Book.index()) {
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h3>
+				<a data-toggle="collapse" data-parent="#accordion"
+					href="#collapse@info.flight_no">@(info.airline + "\t:\t" +
+					info.flight_no)</a> <input type="hidden" name="flight_no" value="@info.flight_no">
+			</h3>
+			<div align="right">
+				<label>$ @(info.price)</label>
+			</div>
+			<div class="span 4">
+				<label>@(info.departure_time + "\t-\t" + info.arrival_time)</label>
+			</div>
+			<div class="span 4">
+				<label>Duration: @(info.duration)</label>
+			</div>
+		</div>
+		<div id="collapse@info.flight_no" class="panel-collapse collapse">
+			<div class="panel-body">
+				<label for="adults">No of Adults: </label> <input type="number"
+					name="adults" min="1" max="3" required> <label for="children">No
+					of Children: </label> <input type="number" name="children" min="0" max="2" required>
+				<button id="get-booking" type="submit" class="btn btn-primary">Book</button>
+				<button id="reset-booking" type="reset" class="btn">Cancel</button>
+			</div>
+		</div>
+	</div>
+	} }
+</div>
+}

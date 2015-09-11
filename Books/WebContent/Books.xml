@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Books xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="Books.xsd">
+	<book>
+		<title>Machine Learning</title>
+		<isbn>007-042-8077</isbn>
+		<price>79.99</price>
+		<publicationdate>1997-03-01</publicationdate>
+		<time>P18Y1M1D</time>
+		<author>
+			<name>
+				<lastname>Mitchell</lastname>
+				<middlename>M.</middlename>
+				<firstname>Tom</firstname>
+			</name>
+			<bday>1985-01-01</bday>
+			<education>PHD</education>
+			<address>
+				<street_name>1 CMU</street_name>
+				<Apt>123</Apt>
+				<city>Pittsburgh</city>
+				<zipcode>15201</zipcode>
+				<country>USA</country>
+			</address>
+		</author>
+		<publisher>
+			<name>McGraw Hill</name>
+			<address>
+				<street_name>19 Terry Ave</street_name>
+				<city>Redmond</city>
+				<zipcode>98052</zipcode>
+				<country>USA</country>
+			</address>
+		</publisher>
+	</book>
+
+	<book>
+		<title>Fundamentals of database systems</title>
+		<isbn>013-608-6209</isbn>
+		<price>89.99</price>
+		<publicationdate>2011-03-01</publicationdate>
+		<time>P4Y1M1D</time>
+		<author>
+			<name>
+				<lastname>Elmasri</lastname>
+				<firstname>Navathe</firstname>
+			</name>
+			<bday>1987-02-15</bday>
+			<education>PHD</education>
+			<address>
+				<street_name>701 South Nedderman Drive</street_name>
+				<city>Arlington</city>
+				<zipcode>76019</zipcode>
+				<country>USA</country>
+			</address>
+		</author>
+		<author>
+			<name>
+				<lastname>Shamkant</lastname>
+				<firstname>Navathe</firstname>
+			</name>
+			<bday>1975-08-05</bday>
+			<education>PHD</education>
+			<address>
+				<street_name>801 Atlantic Dr</street_name>
+				<Apt>320</Apt>
+				<city>Atlanta</city>
+				<zipcode>30332</zipcode>
+				<country>USA</country>
+			</address>
+		</author>
+		<publisher>
+			<name>Pearson Education Inc</name>
+			<address>
+				<street_name>501 Bolyson</street_name>
+				<Suite>900</Suite>
+				<city>Boston</city>
+				<zipcode>21160</zipcode>
+				<country>USA</country>
+			</address>
+		</publisher>
+	</book>
+
+	<book>
+		<title>Hadoop</title>
+		<isbn>128-317-9414</isbn>
+		<price>109.99</price>
+		<publicationdate>2010-10-01</publicationdate>
+		<time>P4Y6M1D</time>
+		<author>
+			<name>
+				<lastname>White</lastname>
+				<firstname>Tom</firstname>
+			</name>
+			<bday>1982-05-11</bday>
+			<education>PHD</education>
+			<address>
+				<street_name>1 UC</street_name>
+				<Apt>1986</Apt>
+				<city>Cambridge</city>
+				<zipcode>12315</zipcode>
+				<country>USA</country>
+			</address>
+		</author>
+		<publisher>
+			<name>O Reilly Media</name>
+			<address>
+				<street_name>1003 Gravenstein</street_name>
+				<Suite>1</Suite>
+				<city>Sebassopol</city>
+				<zipcode>93472</zipcode>
+				<country>USA</country>
+			</address>
+		</publisher>
+	</book>
+
+	<book>
+		<title>Introduction to Algorithms, Third Edition</title>
+		<isbn>128-317-9414</isbn>
+		<price>104.99</price>
+		<publicationdate>2012-03-19</publicationdate>
+		<time>P2Y5M11D</time>
+		<author>
+			<name>
+				<lastname>Cormen</lastname>
+				<middlename>H.</middlename>
+				<firstname>Thomas</firstname>
+			</name>
+			<bday>1979-08-21</bday>
+			<education>MBA</education>
+			<address>
+				<street_name>6211 Sudikoff Laboratory</street_name>
+				<city>Hanover</city>
+				<zipcode>37550</zipcode>
+				<country>USA</country>
+			</address>
+		</author>
+		<author>
+			<name>
+				<lastname>Leiserson</lastname>
+				<middlename>E.</middlename>
+				<firstname>Charles</firstname>
+			</name>
+			<bday>1953-11-10</bday>
+			<education>MS</education>
+			<address>
+				<street_name>32 Vassar Street</street_name>
+				<city>Cambridge</city>
+				<zipcode>21390</zipcode>
+				<country>USA</country>
+			</address>
+		</author>
+		<publisher>
+			<name>The MIT Press</name>
+			<address>
+				<street_name>1 Duchess Street</street_name>
+				<city>London</city>
+				<zipcode>34567</zipcode>
+				<country>UK</country>
+			</address>
+		</publisher>
+	</book>
+
+	<book>
+		<title>Introduction to Algorithms, Second Edition</title>
+		<isbn>128-317-9414</isbn>
+		<price>95.00</price>
+		<publicationdate>2008-10-21</publicationdate>
+		<time>P2Y5M11D</time>
+		<author>
+			<name>
+				<lastname>Cormen</lastname>
+				<middlename>H.</middlename>
+				<firstname>Thomas</firstname>
+			</name>
+			<bday>1979-08-21</bday>
+			<education>MBA</education>
+			<address>
+				<street_name>6211 Sudikoff Laboratory</street_name>
+				<city>Hanover</city>
+				<zipcode>37550</zipcode>
+				<country>USA</country>
+			</address>
+		</author>
+		<author>
+			<name>
+				<lastname>Leiserson</lastname>
+				<middlename>E.</middlename>
+				<firstname>Charles</firstname>
+			</name>
+			<bday>1953-11-10</bday>
+			<education>MS</education>
+			<address>
+				<street_name>32 Vassar Street</street_name>
+				<city>Cambridge</city>
+				<zipcode>21390</zipcode>
+				<country>USA</country>
+			</address>
+		</author>
+		<publisher>
+			<name>The MIT Press</name>
+			<address>
+				<street_name>1 Duchess Street</street_name>
+				<city>London</city>
+				<zipcode>34567</zipcode>
+				<country>UK</country>
+			</address>
+		</publisher>
+	</book>
+</Books>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Shopping Cart</title>
+
+<!-- Link to icon on the window title -->
+<link rel="icon" href="img/UTD.ico" />
+
+<!-- Link to CSS file -->
+<link rel="stylesheet" href="css/Style.css" />
+</head>
+<body>
+	<!-- Display the cart in a table -->
+	<div class="simpleCart_items CSSTableGenerator"></div>
+	<button id="hide">Hide Shopping Cart</button>
+	<button id="show">Show Shopping Cart</button>
+	<h4>Press and hold Space to animate this page!</h4>
+
+	<!-- Add items to the shelf -->
+	<div class="simpleCart_shelfItem">
+		<div class="item_name">
+			<h2>BasketBall</h2>
+		</div>
+		<span style="display: none">A game played between two teams of
+			five players in which goals are scored by throwing a ball through a
+			netted hoop fixed above each end of the court.</span>
+		<table>
+			<tr>
+				<td><img src="img/basketball.jpg" alt="Basketball"
+					id="Basketball"></td>
+				<td><span class="item_price">$19.99</span></td>
+				<td><a href="javascript:;" class="item_add">Add to Cart</a></td>
+			</tr>
+		</table>
+	</div>
+
+	<div class="simpleCart_shelfItem">
+		<div class="item_name">
+			<h2>Football</h2>
+		</div>
+		<span style="display: none">A form of team game played in North
+			America with an oval ball on a field marked out as a gridiron</span>
+		<table>
+			<tr>
+				<td><img src="img/football.jpg" alt="Football" id="Football"></td>
+				<td><span class="item_price">$15.99</span></td>
+				<td><a href="javascript:;" class="item_add">Add to Cart</a></td>
+			</tr>
+		</table>
+	</div>
+
+	<div class="simpleCart_shelfItem">
+		<div class="item_name">
+			<h2>Baseball</h2>
+		</div>
+		<span style="display: none">A ball game played between two
+			teams of nine on a field with a diamond-shaped circuit of four bases</span>
+		<table>
+			<tr>
+				<td><img src="img/baseball.jpg" alt="Baseball" id="Baseball"></td>
+				<td><span class="item_price">$9.99</span></td>
+				<td><a href="javascript:;" class="item_add">Add to Cart</a></td>
+			</tr>
+		</table>
+	</div>
+
+	<!-- Display the cart summary -->
+	<table class="CSSTableGenerator" id="CartSummary">
+		<tr>
+			<th>Number of Items</th>
+			<th>Total amount</th>
+		</tr>
+		<tr>
+			<td>
+				<!--number of items in the cart--> <span class="simpleCart_quantity"></span>
+			</td>
+			<td>
+				<!-- total cost of cart before tax & shipping--> <span
+				class="simpleCart_total"></span>
+			</td>
+		</tr>
+	</table>
+	<button id="toggle">Show/Hide cart summary</button>
+	Press alt key and hover over the items of the summary for effects!!
+
+	<div>
+		<h3>Do not see your item in the list? Press Enter to create a
+			Wishlist!!!</h3>
+		<table class="CSSTableGenerator" id="Wishlist" style="display: none">
+			<tr>
+				<th>Name</th>
+				<th>Description</th>
+				<th>Price wished</th>
+				<th></th>
+			</tr>
+		</table>
+		<h4>
+			<span id="Wishmessage" style="display: none"></span>
+		</h4>
+		<span id="Wishform" style="display: none"> Name: <input
+			type="text" id="Name"><span id="NameHelp"></span><br>
+			Description: <input type="text" id="Description"><span
+			id="DescHelp"></span><br> Price: <input type="number" min="0"
+			id="Price"><span id="PriceHelp"></span><br>
+			<button id="Add" style="display: none">Add row to Wish list</button>
+		</span>
+	</div>
+
+	<!-- Script for jQuery -->
+	<script
+		src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+	<!-- Other scripts -->
+	<script src="js/simpleCart.js"></script>
+	<script src="js/ShoppingCart.js"></script>
+	<script src="js/UpdateTable.js"></script>
+</body>
+</html>
