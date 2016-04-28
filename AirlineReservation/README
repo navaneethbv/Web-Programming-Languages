@@ -38,7 +38,7 @@ If running in HTTPS, manually enter the home page url after authentication from 
 
 The following has been implemented outside of this application:-
 
-1. Apllication redundancy
+1. Application redundancy
 2. Database sharding
 
 To configure this application :-
